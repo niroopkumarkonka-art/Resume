@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Resume in Browser",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}/index.html",
+            "runtimeArgs": [
+                "--new-window",
+                "--disable-extensions"
+            ],
+            "sourceMaps": true,
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "open-in-browser"
+        },
+        {
+            "name": "Launch with Live Server",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:5500",
+            "webRoot": "${workspaceFolder}",
+            "runtimeArgs": [
+                "--new-window"
+            ]
+        },
+        {
+            "name": "Open in Firefox",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "file": "${workspaceFolder}/index.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

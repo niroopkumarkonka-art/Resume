@@ -1,0 +1,76 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Open in Browser (Chrome)",
+            "type": "shell",
+            "command": "start",
+            "args": [
+                "chrome",
+                "${workspaceFolder}/index.html"
+            ],
+            "windows": {
+                "command": "cmd",
+                "args": [
+                    "/C",
+                    "start chrome \"${workspaceFolder}/index.html\""
+                ]
+            },
+            "presentation": {
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "Open in Edge",
+            "type": "shell",
+            "windows": {
+                "command": "cmd",
+                "args": [
+                    "/C",
+                    "start msedge \"${workspaceFolder}/index.html\""
+                ]
+            },
+            "presentation": {
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "Open in Firefox",
+            "type": "shell",
+            "windows": {
+                "command": "cmd",
+                "args": [
+                    "/C",
+                    "start firefox \"${workspaceFolder}/index.html\""
+                ]
+            },
+            "presentation": {
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "Live Server - Start",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "live-server",
+                "${workspaceFolder}",
+                "--port=5500"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": ".*",
+                    "line": 1,
+                    "column": 1,
+                    "message": 1
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*",
+                    "endsPattern": "Serving at.*"
+                }
+            }
+        }
+    ]
+}

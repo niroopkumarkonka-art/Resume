@@ -1,0 +1,154 @@
+/* Base smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Modern Skill Tags */
+.skill-tag {
+    background-color: #e0e7ff; /* Bright indigo-100 */
+    color: #4338ca; /* Deep indigo-700 */
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+    box-shadow: 0 2px 4px rgba(67, 56, 202, 0.1);
+}
+
+/* Dark mode adjustments for skill tags */
+.dark .skill-tag {
+    background-color: #312e81; /* Indigo-900 */
+    color: #c7d2fe; /* Indigo-200 */
+    box-shadow: none;
+}
+
+.skill-tag:hover {
+    background-color: #4f46e5;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(79, 70, 229, 0.3);
+}
+
+/* Interactive 3D Project Cards */
+.project-card {
+    perspective: 1500px;
+    transform-style: preserve-3d;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+}
+
+.project-card:hover {
+    border-color: #818cf8; 
+    box-shadow: 0 25px 50px -12px rgba(79, 70, 229, 0.25);
+    z-index: 10;
+}
+
+.dark .project-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    border-color: #6366f1;
+}
+
+.card-content {
+    transition: transform 0.1s ease-out; 
+    transform-style: preserve-3d;
+}
+
+/* Simple hover effect for non-3D items */
+.interactive-hover {
+    transition: all 0.3s ease;
+}
+.interactive-hover:hover {
+    background-color: white;
+    transform: translateX(8px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border-color: #c7d2fe;
+}
+.dark .interactive-hover:hover {
+    background-color: #1e293b;
+    border-color: #475569;
+}
+
+/* Fade-in Animation on Load */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Print Styles --- */
+/* Completely overrides colors to print as a perfect B&W/grayscale standard resume */
+@media print {
+    body {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .resume-paper {
+        box-shadow: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+        background-color: white !important;
+    }
+
+    header {
+        background: white !important;
+        color: black !important;
+        border-bottom: 2px solid black !important;
+        padding: 2rem 0 1rem 0 !important;
+    }
+    
+    header h1, header h2, header p {
+        color: black !important;
+        text-shadow: none !important;
+    }
+    
+    header .bg-black\/10, header .bg-white\/20 {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+
+    .project-card {
+        padding: 0 0 1rem 0 !important;
+        border: none !important;
+        border-left: 3px solid #ccc !important;
+        padding-left: 1rem !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        margin-bottom: 1rem !important;
+        break-inside: avoid;
+    }
+    
+    .project-card .card-content {
+        transform: none !important;
+    }
+
+    .skill-tag {
+        border: 1px solid #999 !important;
+        color: black !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0.2rem 0.5rem !important;
+    }
+
+    .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .print\:hidden {
+        display: none !important;
+    }
+
+    * {
+        color: black !important;
+    }
+}

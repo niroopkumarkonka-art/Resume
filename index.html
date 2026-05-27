@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konka Niroop Kumar | Interactive Resume</title>
+    
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-gray-800 dark:text-gray-200 font-sans antialiased p-4 md:p-10 min-h-screen flex justify-center items-start transition-colors duration-500">
+
+    <!-- Interactive Action Bar -->
+    <div class="fixed top-6 right-6 z-50 flex gap-4 print:hidden">
+        <button id="theme-toggle" class="bg-white dark:bg-slate-800 text-slate-800 dark:text-yellow-400 w-12 h-12 rounded-full shadow-xl flex justify-center items-center transition-transform hover:scale-110 border border-slate-200 dark:border-slate-700">
+            <span class="dark:hidden text-xl">🌙</span>
+            <span class="hidden dark:block text-xl">☀️</span>
+        </button>
+        <button id="print-btn" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-full shadow-xl font-semibold transition-all hover:shadow-indigo-500/30 flex items-center gap-2 transform hover:-translate-y-1">
+            <span>🖨️</span> Save PDF
+        </button>
+    </div>
+
+    <!-- Resume Document Container -->
+    <main class="resume-paper bg-white dark:bg-slate-900 w-full max-w-5xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.07)] dark:shadow-[0_20px_50px_rgba(0,_0,_0,_0.5)] rounded-2xl overflow-hidden relative transition-colors duration-300">
+        
+        <!-- Vibrant Header Section -->
+        <header class="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white p-12 relative overflow-hidden">
+            <!-- Decorative floating orbs -->
+            <div class="absolute -top-10 -right-10 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-pulse print:hidden"></div>
+            <div class="absolute bottom-0 left-20 w-40 h-40 bg-pink-400 rounded-full mix-blend-overlay filter blur-2xl opacity-30 print:hidden"></div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-end gap-6 relative z-10">
+                
+                <!-- Left Side: Avatar & Name -->
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <!-- Your Professional Photo -->
+                    <div class="shrink-0">
+                        <img src="668276411_1142579971358782_7209109768092852635_n.jpg" alt="Konka Niroop Kumar" class="w-28 h-28 md:w-32 md:h-32 rounded-full border-4 border-white/40 shadow-xl bg-white/10 backdrop-blur-sm print:border-slate-300 print:shadow-none print:bg-white object-cover object-top">
+                    </div>
+                    
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-3 drop-shadow-md">Konka Niroop Kumar</h1>
+                        <div class="inline-block bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/30">
+                            <h2 class="text-lg md:text-xl text-blue-50 font-semibold">B.Tech CSE (AIML) Student</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Contact Info -->
+                <div class="text-center md:text-right text-sm md:text-base text-blue-100 space-y-1.5 font-medium bg-black/10 p-4 rounded-xl backdrop-blur-sm border border-white/10 shrink-0">
+                    <p class="flex items-center justify-center md:justify-end gap-2"><span>📍</span> Hyderabad, India</p>
+                    <p class="flex items-center justify-center md:justify-end gap-2"><span>👤</span> 18 Years Old</p>
+                    <p class="flex items-center justify-center md:justify-end gap-2"><span>📧</span> niroopkumarkonka@gmail.com</p>
+                    <p class="flex items-center justify-center md:justify-end gap-2"><span>📞</span> +91 9390962020</p>
+                
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Left Column: Summary, Education, Skills, Languages -->
+            <div class="lg:col-span-4 space-y-10">
+                
+                <section class="fade-in">
+                    <h3 class="flex items-center gap-2 text-xl font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-4">
+                        <span class="w-8 h-1 bg-indigo-600 dark:bg-indigo-400 rounded-full inline-block"></span> Profile
+                    </h3>
+                    <p class="text-base leading-relaxed text-slate-600 dark:text-slate-400 text-justify">
+                        A first-year undergraduate student with a foundational understanding of front-end web development, Python programming, and 3D modeling. Eager to apply theoretical knowledge to practical, eco-friendly tech solutions and continuously expand technical skill sets in Artificial Intelligence.
+                    </p>
+                </section>
+
+                <section class="fade-in">
+                    <h3 class="flex items-center gap-2 text-xl font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-4">
+                        <span class="w-8 h-1 bg-indigo-600 dark:bg-indigo-400 rounded-full inline-block"></span> Education
+                    </h3>
+                    <div class="interactive-hover p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 shadow-sm">
+                        <h4 class="font-bold text-slate-800 dark:text-white text-lg">Aurora Deemed to be University</h4>
+                        <p class="text-indigo-600 dark:text-indigo-400 font-semibold mt-1">B.Tech - CSE (AIML)</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2 flex items-center gap-1"><span>📅</span> First Year | Present</p>
+                    </div>
+                </section>
+
+                <section class="fade-in">
+                    <h3 class="flex items-center gap-2 text-xl font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-4">
+                        <span class="w-8 h-1 bg-indigo-600 dark:bg-indigo-400 rounded-full inline-block"></span> Skills
+                    </h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="skill-tag">HTML5 & CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL Database</span>
+                        <span class="skill-tag">AutoCAD 2D/3D</span>
+                    </div>
+                </section>
+
+                <section class="fade-in">
+                    <h3 class="flex items-center gap-2 text-xl font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-4">
+                        <span class="w-8 h-1 bg-indigo-600 dark:bg-indigo-400 rounded-full inline-block"></span> Languages
+                    </h3>
+                    <div class="space-y-2 text-slate-600 dark:text-slate-400 font-medium">
+                        <p class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/30 px-3 py-2 rounded-lg">English <span class="text-indigo-500 text-sm">Fluent</span></p>
+                        <p class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/30 px-3 py-2 rounded-lg">Telugu <span class="text-indigo-500 text-sm">Native</span></p>
+                        <p class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/30 px-3 py-2 rounded-lg">French <span class="text-indigo-500 text-sm">Introductory</span></p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Experience & Projects -->
+            <div class="lg:col-span-8 space-y-8">
+                
+                <section class="fade-in">
+                    <h3 class="flex items-center gap-2 text-2xl font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-8">
+                        <span class="w-12 h-1 bg-indigo-600 dark:bg-indigo-400 rounded-full inline-block"></span> Projects & Achievements
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- WasteWise -->
+                        <div class="project-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700">
+                            <div class="card-content h-full flex flex-col justify-between">
+                                <div>
+                                    <div class="w-10 h-10 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg flex items-center justify-center mb-4 text-xl">🌱</div>
+                                    <h4 class="text-xl font-bold text-slate-800 dark:text-white mb-1">WasteWise Prototype</h4>
+                                    <p class="text-sm text-indigo-600 dark:text-indigo-400 font-bold mb-4">Google Solution Challenge</p>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                                        Conceptualized and submitted a working prototype for an eco-friendly waste management system. Designed as an innovative, technology-driven solution to optimize waste handling and promote environmental sustainability.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hackathon -->
+                        <div class="project-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700">
+                            <div class="card-content h-full flex flex-col justify-between">
+                                <div>
+                                    <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center mb-4 text-xl">🏆</div>
+                                    <h4 class="text-xl font-bold text-slate-800 dark:text-white mb-1">Hack-to-Hire Ideathon</h4>
+                                    <p class="text-sm text-indigo-600 dark:text-indigo-400 font-bold mb-4">Top 5 Finalist | VNSL Squad</p>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                                        Collaborated as a first-year student team to conceptualize and pitch an innovative technical solution, successfully competing against senior peers to secure a top 5 placement.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Smart Calculator -->
+                        <div class="project-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700">
+                            <div class="card-content h-full flex flex-col justify-between">
+                                <div>
+                                    <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-lg flex items-center justify-center mb-4 text-xl">🧮</div>
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                        <h4 class="text-xl font-bold text-slate-800 dark:text-white mb-1 md:mb-0">Smart Scientific Calculator</h4>
+                                    </div>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                                        Developed a multi-functional web application focusing on user interface design and accurate logic implementation. Integrated real-time currency calculation and temperature conversion tabs.
+                                    </p>
+                                    <span class="text-xs font-bold bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-full w-fit">HTML • CSS • JS • Python</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Academic Journals -->
+                        <div class="project-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700">
+                            <div class="card-content h-full flex flex-col justify-between">
+                                <div>
+                                    <div class="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-lg flex items-center justify-center mb-4 text-xl">📓</div>
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                        <h4 class="text-xl font-bold text-slate-800 dark:text-white mb-1 md:mb-0">Experiential Learning Journals</h4>
+                                    </div>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                                        Maintained a comprehensive series of reflective journals utilizing Kolb’s Experiential Learning Cycle. Documented critical insights across modules like React.js and Database schemas under the guidance of Harsha sir.
+                                    </p>
+                                    <span class="text-xs font-bold bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-full w-fit">Academic Documentation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Number Systems in FinTech (Full Width) -->
+                        <div class="project-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700 md:col-span-2">
+                            <div class="card-content h-full flex flex-col justify-between">
+                                <div>
+                                    <div class="w-10 h-10 bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded-lg flex items-center justify-center mb-4 text-xl">💳</div>
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                        <h4 class="text-xl font-bold text-slate-800 dark:text-white mb-1 md:mb-0">Number Systems in FinTech</h4>
+                                        <span class="text-xs font-bold bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-full w-fit">Research & Design Study</span>
+                                    </div>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                                        Designed and executed a 5-week project plan exploring the implementation of core computing systems (Binary, BCD, Hexadecimal). Analyzed the mathematical integration of these systems within modern banking technologies, specifically focusing on the architecture behind ATMs and UPI QR codes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+</html>
